@@ -13,6 +13,17 @@ connectDB();
 // Middleware
 app.use(express.json());
 
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // Vite default dev server
+      "https://your-frontend-domain.vercel.app", // once you deploy frontend
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 const PORT = process.env.PORT || 5000;
 
 // app.get("/api/hello", (req, res) => {
