@@ -18,9 +18,9 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173", // Vite default dev server
-      //   "https://designsbyraksha-measurements.vercel.app", // once you deploy frontend
-      //   "https://measurement-frontend-ornaments.vercel.app",
-      //   "https://measurement-frontend-ibutgo3rp-ornaments.vercel.app",
+      "https://designsbyraksha-measurements.vercel.app",
+      "https://measurement-frontend-ornaments.vercel.app",
+      "https://measurement-frontend-ibutgo3rp-ornaments.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
