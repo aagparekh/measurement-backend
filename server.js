@@ -17,8 +17,8 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "http://localhost:5173", // Vite default dev server
-      "https://your-frontend-domain.vercel.app", // once you deploy frontend
+      //   "http://localhost:5173", // Vite default dev server
+      "https://designsbyraksha-measurements.vercel.app/", // once you deploy frontend
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
