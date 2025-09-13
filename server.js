@@ -13,19 +13,24 @@ connectDB();
 
 // Middleware
 app.use(express.json());
-
+const PORT = process.env.PORT || 5000;
 app.use(
   cors({
     origin: [
-      //   "http://localhost:5173", // Vite default dev server
-      "https://designsbyraksha-measurements.vercel.app/", // once you deploy frontend
+      "http://localhost:5173", // Vite default dev server
+      //   "https://designsbyraksha-measurements.vercel.app", // once you deploy frontend
+      //   "https://measurement-frontend-ornaments.vercel.app",
+      //   "https://measurement-frontend-ibutgo3rp-ornaments.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
 
-const PORT = process.env.PORT || 5000;
+app.use((req, res, next) => {
+  console.log("Incoming Origin:", req.headers.origin);
+  next();
+});
 
 // app.get("/api/hello", (req, res) => {
 //   res.json({ message: "Hello from server!" });
