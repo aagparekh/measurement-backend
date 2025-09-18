@@ -57,7 +57,23 @@ const customerSchema = new mongoose.Schema(
         type: Number,
         default: 0,
       },
+      blouse_len: {
+        type: Number,
+        default: 0,
+      },
+      blouse_back_deep: {
+        type: Number,
+        default: 0,
+      },
       plazo_len: {
+        type: Number,
+        default: 0,
+      },
+      bellbottom_len: {
+        type: Number,
+        default: 0,
+      },
+      pant_len: {
         type: Number,
         default: 0,
       },
